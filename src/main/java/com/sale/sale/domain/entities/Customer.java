@@ -1,5 +1,6 @@
 package com.sale.sale.domain.entities;
 
+import com.sale.sale.domain.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,4 +29,6 @@ public class Customer {
     private String password;
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date createdAt;
+    @Column()
+    private Role role;
 }
