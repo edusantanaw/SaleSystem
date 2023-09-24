@@ -1,10 +1,12 @@
 package com.sale.sale.data.repositories;
 
 import com.sale.sale.domain.entities.Customer;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Optional;
 
 public interface CreateCustomerRepository {
-    Optional<Customer> loadByEmail(String email);
-    Customer create(Customer data);
+    Customer findByEmail(String email);
+
+    Customer save(Customer data);
 }

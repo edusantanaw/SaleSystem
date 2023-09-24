@@ -7,15 +7,5 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-public class SignupDto {
-    @Email(message = "e-mail is invalid!")
-    @NotBlank(message = "e-mail is required!")
-    public String email;
-    @NotBlank(message = "password is required!!")
-    public String password;
-    @NotBlank(message = "name is required1")
-    public String name;
-    @NotBlank(message = "role is required!")
-    public Role role;
+public record SignupDto(String email, String password, String name, String role) {
 }
